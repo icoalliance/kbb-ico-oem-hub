@@ -154,9 +154,9 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
       <h1 class="hero-h1">Your OEM<br><em>Partner</em> Hub</h1>
       <p class="hero-sub">Select an OEM to view co-op eligibility, pricing, enrollment links, and product one-sheeters — everything you need to close the deal.</p>
       <div class="hero-counters">
-        <div class="hc"><div class="hc-num" id="live-count">13</div><div class="hc-lbl">Live Programs</div></div>
+        <div class="hc"><div class="hc-num" id="live-count">14</div><div class="hc-lbl">Live Programs</div></div>
         <div class="hc"><div class="hc-num" id="soon-count">9</div><div class="hc-lbl">Coming Soon</div></div>
-        <div class="hc"><div class="hc-num">12</div><div class="hc-lbl">Total OEMs</div></div>
+        <div class="hc"><div class="hc-num">15</div><div class="hc-lbl">Total OEMs</div></div>
       </div>
     </div>
     <div class="hero-kbb-wrap">
@@ -196,7 +196,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 
   <div class="sec-hdr" id="live-hdr">
     <span class="sec-title">Live Programs</span>
-    <span class="sec-count" id="live-badge">13</span>
+    <span class="sec-count" id="live-badge">14</span>
     <span class="sec-rule"></span>
   </div>
   <div class="live-grid" id="live-grid">
@@ -548,7 +548,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 
   <div class="sec-hdr" id="soon-hdr">
     <span class="sec-title">Coming Soon</span>
-    <span class="sec-count sec-count-soon" id="soon-badge">9</span>
+    <span class="sec-count sec-count-soon" id="soon-badge">1</span>
     <span class="sec-rule"></span>
   </div>
   <div class="soon-grid" id="soon-grid">
@@ -566,58 +566,6 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
       </div>
     </div>
 
-    <div class="oem-card soon" id="card-toyota">
-      <div class="card-inner">
-        <div class="card-logo-wrap soon-logo">
-          <span class="soon-abbr">TOY</span>
-        </div>
-        <div class="card-body">
-          <div class="card-name">Toyota</div>
-          <div class="card-program">Toyota Certified Used Vehicles</div>
-        </div>
-        <div class="coming-badge">Coming Soon</div>
-      </div>
-    </div>
-
-    <div class="oem-card soon" id="card-kia">
-      <div class="card-inner">
-        <div class="card-logo-wrap soon-logo">
-          <span class="soon-abbr">KIA</span>
-        </div>
-        <div class="card-body">
-          <div class="card-name">Kia</div>
-          <div class="card-program">Kia Certified Pre-Owned</div>
-        </div>
-        <div class="coming-badge">Coming Soon</div>
-      </div>
-    </div>
-
-    <div class="oem-card soon" id="card-stellantis">
-      <div class="card-inner">
-        <div class="card-logo-wrap soon-logo">
-          <span class="soon-abbr">STE</span>
-        </div>
-        <div class="card-body">
-          <div class="card-name">Stellantis</div>
-          <div class="card-program">Chrysler / Dodge / Jeep / Ram</div>
-        </div>
-        <div class="coming-badge">Coming Soon</div>
-      </div>
-    </div>
-
-    <div class="oem-card soon" id="card-vw">
-      <div class="card-inner">
-        <div class="card-logo-wrap soon-logo">
-          <span class="soon-abbr">VOL</span>
-        </div>
-        <div class="card-body">
-          <div class="card-name">Volkswagen</div>
-          <div class="card-program">VW Certified Pre-Owned</div>
-        </div>
-        <div class="coming-badge">Coming Soon</div>
-      </div>
-    </div>
-
 
   <div class="empty-state hidden" id="empty-state">
     <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
@@ -628,7 +576,23 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 
 <script>
 // OEM data for filtering
-var OEMS = [{"id": "vw", "name": "Volkswagen", "status": "live", "has_ico": false, "has_tia": false, "has_coop": true}, {"id": "toyota", "name": "Toyota", "status": "live", "has_ico": true, "has_tia": true, "has_coop": false}, {"id": "subaru", "name": "Subaru", "status": "live", "has_ico": false, "has_tia": false, "has_coop": true}, {"id": "stellantis", "name": "Stellantis", "status": "live", "has_ico": true, "has_tia": true, "has_coop": true}, {"id": "mitsubishi", "name": "Mitsubishi", "status": "live", "has_ico": false, "has_tia": false, "has_coop": false}, {"id": "mazda", "name": "Mazda", "status": "live", "has_ico": true, "has_tia": true, "has_coop": true}, {"id": "mazda", "name": "Mazda", "status": "live", "has_ico": true, "has_tia": true, "has_coop": true}, {"id": "lexus", "name": "Lexus", "status": "live", "has_ico": true, "has_tia": true, "has_coop": false}, {"id": "kia", "name": "Kia", "status": "live", "has_ico": false, "has_tia": false, "has_coop": true}, {"id": "jlr", "name": "Jaguar Land Rover", "status": "live", "has_ico": true, "has_tia": false, "has_coop": false}, {"id": "gm", "name": "GM", "status": "live", "has_ico": true, "has_tia": false, "has_coop": false}, {'id': 'audi', 'name': 'Audi', 'status': 'live', 'has_ico': true, 'has_tia': true, 'has_coop': true}, {'id': 'honda', 'name': 'Honda', 'status': 'live', 'has_ico': true, 'has_tia': true, 'has_coop': false}, {'id': 'acura', 'name': 'Acura', 'status': 'live', 'has_ico': true, 'has_tia': true, 'has_coop': false}, {'id': 'ford', 'name': 'Ford', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'toyota', 'name': 'Toyota', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'kia', 'name': 'Kia', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'stellantis', 'name': 'Stellantis', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'vw', 'name': 'Volkswagen', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'jlr', 'name': 'Jaguar Land Rover', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'mazda', 'name': 'Mazda', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'subaru', 'name': 'Subaru', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}, {'id': 'mitsubishi', 'name': 'Mitsubishi', 'status': 'soon', 'has_ico': false, 'has_tia': false, 'has_coop': false}];
+var OEMS = [
+  {"id":"audi",       "name":"Audi",              "status":"live","has_ico":true, "has_tia":true, "has_coop":true,  "tags":"co-op co-op eligible unite mary ann sourial"},
+  {"id":"gm",         "name":"GM",                "status":"live","has_ico":true, "has_tia":false,"has_coop":true,  "tags":"co-op co-op eligible chevrolet buick cadillac gmc jason perko dpe"},
+  {"id":"honda-acura","name":"Honda / Acura",      "status":"live","has_ico":true, "has_tia":true, "has_coop":false, "tags":"honda acura jd power michele everett"},
+  {"id":"jlr",        "name":"JLR",               "status":"live","has_ico":true, "has_tia":false,"has_coop":false, "tags":"jaguar land rover rooster robinson cai retail"},
+  {"id":"kia",        "name":"Kia",               "status":"live","has_ico":false,"has_tia":true, "has_coop":true,  "tags":"co-op co-op eligible shift digital michele everett lead driver"},
+  {"id":"lexus",      "name":"Lexus",             "status":"live","has_ico":true, "has_tia":true, "has_coop":false, "tags":"shift digital michele everett amazing digital buying center"},
+  {"id":"mazda",      "name":"Mazda",             "status":"live","has_ico":true, "has_tia":true, "has_coop":true,  "tags":"co-op co-op eligible shift digital will canady lead driver"},
+  {"id":"mitsubishi", "name":"Mitsubishi",        "status":"live","has_ico":false,"has_tia":false,"has_coop":false, "tags":"unite digital jason perko lead driver"},
+  {"id":"stellantis", "name":"Stellantis",        "status":"live","has_ico":true, "has_tia":true, "has_coop":true,  "tags":"co-op co-op eligible chrysler dodge jeep ram alfa romeo fiat pat steiner shift digital"},
+  {"id":"subaru",     "name":"Subaru",            "status":"live","has_ico":false,"has_tia":false,"has_coop":true,  "tags":"co-op co-op eligible shift digital zach cowen lead driver"},
+  {"id":"toyota",     "name":"Toyota",            "status":"live","has_ico":true, "has_tia":true, "has_coop":false, "tags":"shift digital michele everett amazing digital i approve tddsprogram"},
+  {"id":"vw",         "name":"Volkswagen",        "status":"live","has_ico":false,"has_tia":false,"has_coop":true,  "tags":"co-op co-op eligible shift digital zach cowen lead driver cdk dealerfire"},
+  {"id":"ford",       "name":"Ford",              "status":"soon","has_ico":false,"has_tia":false,"has_coop":false, "tags":""},
+  {"id":"genesis",    "name":"Genesis",           "status":"soon","has_ico":false,"has_tia":false,"has_coop":false, "tags":""},
+  {"id":"subaru2",    "name":"Subaru (EA/TIA)",   "status":"soon","has_ico":false,"has_tia":false,"has_coop":false, "tags":""}
+];
 
 var activeFilter = 'all';
 
@@ -651,7 +615,7 @@ function filterCards() {
     var el = document.getElementById('card-' + o.id);
     if (!el) return;
 
-    var matchSearch = !q || o.name.toLowerCase().includes(q);
+    var matchSearch = !q || o.name.toLowerCase().includes(q) || (o.tags && o.tags.toLowerCase().includes(q));
     var matchFilter = activeFilter === 'all' ||
       (activeFilter === 'live'  && o.status === 'live') ||
       (activeFilter === 'ico'   && o.has_ico) ||
