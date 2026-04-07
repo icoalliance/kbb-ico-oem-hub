@@ -99,7 +99,25 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .card-pills{display:flex;flex-direction:column;gap:5px}
 .prod-pill{font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;display:inline-flex;align-items:center;gap:5px;width:fit-content}
 .coop-dot{width:7px;height:7px;border-radius:50%;background:#0D6E37;flex-shrink:0}
-.card-note{font-size:11px;color:var(--text3);margin-top:10px;font-style:italic;line-height:1.5}
+
+.card-note{font-size:11px;color:var(--text3);border-top:1px solid var(--border);padding-top:7px;margin-top:8px;line-height:1.5}
+.stats-bar{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:18px 24px;margin-bottom:24px;box-shadow:var(--sh)}
+.stats-bar-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
+.stat-item{padding:14px 16px;border-right:1px solid var(--border);background:var(--surface)}
+.stat-item:last-child{border-right:none}
+.stat-item-num{font-size:24px;font-weight:800;color:var(--blue);letter-spacing:-.02em;line-height:1;margin-bottom:3px}
+.stat-item-lbl{font-size:11px;color:var(--text3);font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}
+.stat-item-sub{font-size:11px;color:var(--text2);line-height:1.4}
+.stat-item-green .stat-item-num{color:var(--green,#0D6E37)}
+.stat-item-gold .stat-item-num{color:#C78700}
+.stat-item-red .stat-item-num{color:#C0201E}
+.intel-bar{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.intel-chip{font-size:11px;padding:4px 10px;border-radius:99px;font-weight:600;white-space:nowrap}
+.ic-green{background:#E5F4ED;color:#0D6E37}
+.ic-gold{background:#FFF8E6;color:#C78700}
+.ic-blue{background:#E8EFF9;color:#003DA5}
+.ic-red{background:#FDEAEA;color:#C0201E}
+@media(max-width:700px){.stats-bar-inner{grid-template-columns:1fr 1fr}.stat-item:nth-child(2){border-right:none}.stat-item:nth-child(3){border-top:1px solid var(--border)}}
 .card-arrow{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue);opacity:0;transform:translateX(-6px);transition:all .2s;flex-shrink:0;margin-top:4px}
 
 /* ── SOON GRID ── */
@@ -165,6 +183,44 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
   </div>
 </div>
 
+<div class="stats-bar">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+    <div>
+      <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px">Program Intelligence</div>
+      <div style="font-size:12px;color:var(--text3)">Key facts across all 13 active OEM programs</div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px">
+      <span class="intel-chip ic-green">&#9989;&nbsp;JLR: Retail contracting allowed</span>
+      <span class="intel-chip ic-red">&#128308;&nbsp;Toyota: "I APPROVE" email step required</span>
+      <span class="intel-chip ic-gold">&#9888;&nbsp;Mazda: Confirm Dig Ad before quoting co-op</span>
+      <span class="intel-chip ic-gold">&#9888;&nbsp;Subaru: Co-op 50–70% — verify rate per dealer</span>
+      <span class="intel-chip ic-gold">&#9888;&nbsp;VW: Co-op within 30% hard-cost budget only</span>
+    </div>
+  </div>
+  <div class="stats-bar-inner">
+    <div class="stat-item">
+      <div class="stat-item-lbl">Co-Op Eligible</div>
+      <div class="stat-item-num">8</div>
+      <div class="stat-item-sub">Audi, GM, Kia, Mazda, Stellantis, Subaru, VW + more</div>
+    </div>
+    <div class="stat-item stat-item-green">
+      <div class="stat-item-lbl">Free OEM Appraisal</div>
+      <div class="stat-item-num" style="color:#0D6E37">6</div>
+      <div class="stat-item-sub">GM, Honda, Acura, Kia, Lexus, Toyota</div>
+    </div>
+    <div class="stat-item stat-item-gold">
+      <div class="stat-item-lbl">Lowest EA Price</div>
+      <div class="stat-item-num" style="color:#C78700">$649</div>
+      <div class="stat-item-sub">Stellantis — 100% co-op, 6 brands</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-item-lbl">Brands Covered</div>
+      <div class="stat-item-num">23</div>
+      <div class="stat-item-sub">Across all 13 active programs</div>
+    </div>
+  </div>
+</div>
+
 <div class="search-bar">
   <div class="search-inner">
     <div class="search-wrap">
@@ -216,7 +272,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           </div>
           <div class="card-pills"><span class="prod-pill" style="background:#E8EFF9;color:#003DA5">ICO Expert Appraisal — $849/mo <span class="coop-dot" title="Co-Op eligible"></span></span>
 <span class="prod-pill" style="background:#E5F4ED;color:#0D6E37">Trade-In Advisor — $369/mo</span></div>
-          <div class="card-note">ICO co-op eligible for Dealer.com sites</div>
+          <div class="card-note">Co-op on EA only (Dealer.com required) &middot; No retail contracting</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -239,7 +295,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           </div>
           <div class="card-pills"><span class="prod-pill" style="background:#E8EFF9;color:#003DA5">ICO Expert Appraisal (Touring) — $849/mo</span>
 <span class="prod-pill" style="background:#E5F4ED;color:#0D6E37">Trade-In Advisor (Sport) — $399/mo</span></div>
-          <div class="card-note">OEM Appraisal included by default — EA is dealer-paid upgrade</div>
+          <div class="card-note">OEM Appraisal free baseline &middot; No co-op &middot; Sold by JD Power</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -262,7 +318,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           </div>
           <div class="card-pills"><span class="prod-pill" style="background:#E8EFF9;color:#003DA5">ICO Expert Appraisal (Advanced) — $849/mo</span>
 <span class="prod-pill" style="background:#E5F4ED;color:#0D6E37">Trade-In Advisor (A-Spec) — $399/mo</span></div>
-          <div class="card-note">OEM Appraisal included by default — EA is dealer-paid upgrade</div>
+          <div class="card-note">OEM Appraisal free baseline &middot; No co-op &middot; Sold by JD Power</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -284,10 +340,10 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
             <span class="card-meta-item"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>DPE / GM Digital</span>
           </div>
           <div class="card-pills">
-            <span class="prod-pill" style="background:#E8EFF9;color:#003DA5">ICO Expert Appraisal — $949/mo</span>
+            <span class="prod-pill" style="background:#E8EFF9;color:#003DA5">ICO Expert Appraisal — $849/mo</span>
             <span class="prod-pill" style="background:#E8F5F2;color:#0A6E5A">Lead Driver&#8482; — $149/mo</span>
           </div>
-          <div class="card-note">4 brands under one DPE enrollment path</div>
+          <div class="card-note">Free OEM Appraisal baseline &middot; 100% co-op &middot; 4 brands &middot; Enroll via DPE portal</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -312,7 +368,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
             <span class="prod-pill" style="background:#E8F2EC;color:#1A4A28">Lead Driver&#8482; — $149/mo</span>
             <span class="prod-pill" style="background:#FEF3C7;color:#92400E">ICO Expert Appraisal — $849/mo (retail)</span>
           </div>
-          <div class="card-note">Non-OEM sponsored — retail contracting allowed</div>
+          <div class="card-note">&#9989; Retail contracting allowed &middot; No co-op &middot; Sold by CAI</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -335,9 +391,8 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           </div>
           <div class="card-pills">
             <span class="prod-pill" style="background:#FBE8E9;color:#C0141C">Lead Driver&#8482; — $175/mo (OEM) <span class="coop-dot" title="Co-Op eligible"></span></span>
-            <span class="prod-pill" style="background:#FEF3C7;color:#92400E">Lead Driver&#8482; — $200/mo (Non-OEM)</span>
-          </div>
-          <div class="card-note">Two pricing tiers — confirm website vendor first</div>
+                      </div>
+          <div class="card-note">OEM Appraisal free baseline &middot; Confirm website provider before quoting</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -359,10 +414,10 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
             <span class="card-meta-item"><svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Shift Digital</span>
           </div>
           <div class="card-pills">
-            <span class="prod-pill" style="background:#F5F5F3;color:#1A1A1A">ICO Expert Appraisal — Confirm pricing</span>
+            <span class="prod-pill" style="background:#F5F5F3;color:#1A1A1A">ICO Expert Appraisal — $849/mo</span>
             <span class="prod-pill" style="background:#E5F4ED;color:#0D6E37">Trade-In Advisor — $399/mo</span>
           </div>
-          <div class="card-note">Toyota/Lexus OEM framework &middot; Buying Center upgrade available</div>
+          <div class="card-note">Free OEM Appraisal baseline &middot; Not co-op eligible &middot; Buying Center exclusive</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -387,7 +442,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
             <span class="prod-pill" style="background:#E5F4ED;color:#0D6E37">Trade-In Advisor — $399/mo</span>
             <span class="prod-pill" style="background:#EDE5F4;color:#4A2080">Lead Driver — $175/mo</span>
           </div>
-          <div class="card-note">Co-Op: 100% (Dig Ad) / 60% &middot; Dealer-paid model &middot; Legacy pricing for eligible dealers</div>
+          <div class="card-note">&#9888; Confirm Dig Ad status before quoting co-op &middot; Dealer-paid model</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -411,7 +466,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           <div class="card-pills">
             <span class="prod-pill" style="background:#F4E6F4;color:#6A0080">Lead Driver — $175/mo (OEM) / $200/mo (CAI)</span>
           </div>
-          <div class="card-note">No co-op &middot; Lead Driver only &middot; Two pricing paths by website provider</div>
+          <div class="card-note">No co-op &middot; Lead Driver only &middot; Unite Digital &middot; Active, no open items</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -437,7 +492,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
             <span class="prod-pill" style="background:#E5F4ED;color:#0D6E37">Trade-In Advisor — $369/mo</span>
             <span class="prod-pill" style="background:#EDE5F4;color:#4A2080">Lead Driver — $149/mo</span>
           </div>
-          <div class="card-note">Co-Op: 100% on all products &middot; 6 brands &middot; Shift Digital program &middot; Shift ID: 73993447</div>
+          <div class="card-note">100% co-op on all products &middot; 6 brands &middot; Bill to Shift ID: 73993447</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -461,7 +516,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           <div class="card-pills">
             <span class="prod-pill" style="background:#EDE5F4;color:#4A2080">Lead Driver — $179/mo (OEM) / $200/mo (CAI)</span>
           </div>
-          <div class="card-note">Co-Op: 50–70% (varies by dealer) &middot; OEM path: approved providers only</div>
+          <div class="card-note">&#9888; Co-op 50&#8211;70% &#8212; verify rate per dealer &middot; Lead Driver only</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -486,7 +541,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
             <span class="prod-pill" style="background:#FFF0F0;color:#EB0A1E">ICO Expert Appraisal — $849/mo</span>
             <span class="prod-pill" style="background:#E5F4ED;color:#0D6E37">Trade-In Advisor — $399/mo</span>
           </div>
-          <div class="card-note">No co-op &middot; Dealer must reply "I APPROVE" to enrollment email &middot; No migration for existing dealers</div>
+          <div class="card-note">&#128308; Dealer must reply &#34;I APPROVE&#34; to activate &middot; No co-op &middot; No migration for existing dealers</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -510,7 +565,7 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
           <div class="card-pills">
             <span class="prod-pill" style="background:#EDE5F4;color:#4A2080">Lead Driver — $175/mo (OEM) / $200/mo (CAI)</span>
           </div>
-          <div class="card-note">Co-Op: up to 100% (within 30% hard-cost budget) &middot; CDK, DealerFire, DealerOn, Dealer.com</div>
+          <div class="card-note">&#9888; Co-op up to 100% within 30% hard-cost budget &middot; Lead Driver only</div>
         </div>
         <div class="card-arrow">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
